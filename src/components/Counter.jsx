@@ -7,11 +7,23 @@ export default function Counter({initialCount, maxCount, step}) {
         setCount(count+num);
     }
 
+    const themeColor = "#f2c2c2"
+
+    const buttonStyle = {
+        height:"50px",
+        width:"50px",
+        color:themeColor,
+        fontSize:"2em",
+        borderRadius:".5em",
+        outline:"none",
+        border:"3px solid" + themeColor
+    }
+
     return (
         <div className="Counter" style={{
             height:"200px",
             width:"200px",
-            backgroundColor:"steelblue",
+            backgroundColor:themeColor,
             padding:"1em",
             borderRadius:"1em",
             display:"flex",
@@ -22,8 +34,8 @@ export default function Counter({initialCount, maxCount, step}) {
         }}>
             <h1>Clicked: {count}</h1>
             <div>
-                <button onClick={()=>{changeCount(step)}}  disabled={count>=maxCount}>+</button>
-                <button onClick={()=>{changeCount(-step)}} disabled={count<=0}>-</button>
+                <button style={buttonStyle} onClick={()=>{changeCount(step)}}  disabled={count>=maxCount}>+</button>
+                <button style={buttonStyle} onClick={()=>{changeCount(-step)}} disabled={count<=0}>-</button>
             </div>
         </div>
     )

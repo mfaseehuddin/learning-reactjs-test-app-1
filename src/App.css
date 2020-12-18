@@ -2,4 +2,11 @@
   display: flex;
   justify-content: center;
   align-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: black;
+  color:#f2c2c2
 }
+
+
